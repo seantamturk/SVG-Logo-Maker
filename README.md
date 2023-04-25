@@ -55,7 +55,7 @@ To use the SVG Logo Maker, navigate to the root directory of the repository in y
 
 ## Walkthrough Video
 
-[Link to walkthrough video](insert_link_here)
+[Link to walkthrough video](https://drive.google.com/file/d/1UPuLVEySCdWg44qHbU302gSigCO9NKy3/view?usp=share_link)
 
 ## Technologies Used
 
@@ -79,7 +79,6 @@ Contributions to the SVG Logo Maker are welcome! To contribute, please follow th
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Links
-- [Repository]()
-- [Website]()
+- [Repository](https://github.com/seantamturk/SVG-Logo-Maker)
 - [Linkedin](https://www.linkedin.com/in/sean-tamturk-8253b722a/)
 - [Site Image]()
