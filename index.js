@@ -63,11 +63,11 @@ inquirer
                 break;
         }
         
+        shape.setColor(answers.shapeColor);
         const svg = new SVG();
         svg.setChosenText(answers.text);
         svg.setChosenShape(shape);
         svg.setTextColor(answers.textColor);
-        shape.shapeColor(answers.shapeColor);
 
         const svgString = svg.render();
         fs.writeFileSync('logo.svg', svgString);
