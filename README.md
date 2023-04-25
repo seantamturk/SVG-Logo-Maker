@@ -17,7 +17,6 @@ In addition to building a functional command-line application, this project help
 - [Acceptance Criteria](#acceptance-criteria)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Walkthrough Video](#walkthrough-video)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
@@ -53,10 +52,6 @@ To install the SVG Logo Maker, follow these steps:
 
 To use the SVG Logo Maker, navigate to the root directory of the repository in your terminal and run the command `node index.js`. The application will prompt you for the necessary inputs to generate the logo.
 
-## Walkthrough Video
-
-[Link to walkthrough video](https://drive.google.com/file/d/1UPuLVEySCdWg44qHbU302gSigCO9NKy3/view?usp=share_link)
-
 ## Technologies Used
 
 - Node.js
@@ -79,6 +74,7 @@ Contributions to the SVG Logo Maker are welcome! To contribute, please follow th
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Links
+- [Link to walkthrough video](https://drive.google.com/file/d/1NNusyOaA_a93R7f7zrw8Ov2vbdQjv3Zi/view?usp=share_link)
 - [Repository](https://github.com/seantamturk/SVG-Logo-Maker)
 - [Linkedin](https://www.linkedin.com/in/sean-tamturk-8253b722a/)
 
