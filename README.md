@@ -81,4 +81,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Links
 - [Repository](https://github.com/seantamturk/SVG-Logo-Maker)
 - [Linkedin](https://www.linkedin.com/in/sean-tamturk-8253b722a/)
-- [Site Image]()
+- [SVG Example](./examples/circle.svg)
