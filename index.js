@@ -62,7 +62,7 @@ inquirer
                 shape = new Triangle();
                 break;
         }
-        
+
         shape.setColor(answers.shapeColor);
         const svg = new SVG();
         svg.setChosenText(answers.text);
@@ -77,6 +77,30 @@ inquirer
     .catch((err) => {
         console.error(err);
     })
+
+describe('Circle', () => {
+    test('render() returns correct SVG string with given color', () => {
+        const circle = new Circle()
+        circle.setColor('#FF0000')
+        expect(circle.render()).toEqual('<circle cx="150" cy="100" r="80" fill="#FF0000" />')
+    })
+})
+
+describe('Square', () => {
+    test('render() returns correct SVG string with given color', () => {
+        const square = new Square()
+        square.setColor('#00FF00')
+        expect(square.render()).toEqual('<rect x="50" y="50" width="200" height="200" fill="#00FF00" />')
+    })
+})
+
+describe('Triangle', () => {
+    test('render() returns correct SVG string with given color', () => {
+        const triangle = new Triangle()
+        triangle.setColor('#0000FF')
+        expect(triangle.render()).toEqual('<polygon points="150 20, 280 180, 20 180" fill="#0000FF" />')
+    })
+})
 
 
     // .then((response) => {
