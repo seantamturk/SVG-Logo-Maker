@@ -61,7 +61,7 @@ To use the SVG Logo Maker, navigate to the root directory of the repository in y
 
 - Node.js
 - Inquirer.js
-- SVG.js
+- Jest.js
 
 ## Contributing
 
@@ -76,9 +76,10 @@ Contributions to the SVG Logo Maker are welcome! To contribute, please follow th
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ## Links
 - [Repository](https://github.com/seantamturk/SVG-Logo-Maker)
 - [Linkedin](https://www.linkedin.com/in/sean-tamturk-8253b722a/)
-- [SVG Example](./examples/circle.svg)
+
+![SVG Example](./examples/circle.png)
