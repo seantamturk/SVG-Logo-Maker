@@ -3,15 +3,6 @@ const fs = require('fs')
 const { Circle, Square, Triangle } = require('./lib/shapes')
 const SVG = require('./lib/createsvg')
 
-//Validates hexidecimal
-function validateColor(input) {
-    if (input.match(/^[0-9a-fA-F]{6}$/) || input.match(/^[0-9a-fA-F]{3}$/)) {
-        return true;
-    } else {
-        return 'Invalid color. Please enter a valid hexadecimal value.';
-    }
-}
-
 inquirer
     .prompt([
         {
@@ -37,14 +28,12 @@ inquirer
             type: 'input',
             message: 'Enter a color for the text (hexadecimal value):',
             name: 'textColor',
-            // validate: validateColor
         },
 
         {
             type: 'input',
             message: 'Enter a color for the shape (hexadecimal value):',
             name: 'shapeColor',
-            // validate: validateColor
         },
     ])
 
@@ -103,13 +92,3 @@ describe('Triangle', () => {
 })
 
 
-    // .then((response) => {
-    //     console.log(response.shape)
-    //     let shape;
-
-    //     shape = new Circle()
-    //     const svg = new SVG()
-
-    //     svg.chosenShape(shape)
-
-    // })
