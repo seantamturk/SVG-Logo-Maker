@@ -3,21 +3,28 @@ const fs = require('fs')
 const { Circle, Square, Triangle } = require('./lib/shapes')
 const SVG = require('./lib/createsvg')
 
-const colorChoices = ['red', 'green', 'blue', 'yellow', 'orange', 'purple'];
+//Validates hexidecimal
+function validateColor(input) {
+    if (input.match(/^[0-9a-fA-F]{6}$/) || input.match(/^[0-9a-fA-F]{3}$/)) {
+        return true;
+    } else {
+        return 'Invalid color. Please enter a valid hexadecimal value.';
+    }
+}
 
 inquirer
-    .createPromptModule([
+    .prompt([
         {
             type: 'list',
             message: 'Choose a shape type:',
             name: 'shape',
             choices: ['circle', 'square', 'triangle']
-        }
+        },
 
         {
-            type: 'input'
+            type: 'input',
             message: 'Enter text for the logo (up to 3 characters):',
-            name: 'text'
+            name: 'text',
             validate: (input) => {
                 if (input.length > 3) {
                     return 'Text must be 3 characters or fewer.';
@@ -25,21 +32,60 @@ inquirer
                 return true;
             },
         },
+
         {
-            type: 'list',
-            message: 'Choose a color for the text:',
+            type: 'input',
+            message: 'Enter a color for the text (hexadecimal value):',
             name: 'textColor',
-            choices: colorChoices,
+            // validate: validateColor
+        },
+
+        {
+            type: 'input',
+            message: 'Enter a color for the shape (hexadecimal value):',
+            name: 'shapeColor',
+            // validate: validateColor
         },
     ])
-    
-    .then((response) => {
-        console.log(response.shape)
+
+    .then((answers) => {
         let shape;
 
-        shape = new Circle()
-        const svg = new SVG()
+        switch (answers.shape) {
+            case 'circle':
+                shape = new Circle();
+                break;
+            case 'square':
+                shape = new Square();
+                break;
+            case 'triangle':
+                shape = new Triangle();
+                break;
+        }
+        
+        const svg = new SVG();
+        svg.setChosenText(answers.text);
+        svg.setChosenShape(shape);
+        svg.setTextColor(answers.textColor);
+        shape.shapeColor(answers.shapeColor);
 
-        svg.chosenShape(shape)
-
+        const svgString = svg.render();
+        fs.writeFileSync('logo.svg', svgString);
+        console.log('Generated logo.svg');
     })
+
+    .catch((err) => {
+        console.error(err);
+    })
+
+
+    // .then((response) => {
+    //     console.log(response.shape)
+    //     let shape;
+
+    //     shape = new Circle()
+    //     const svg = new SVG()
+
+    //     svg.chosenShape(shape)
+
+    // })
