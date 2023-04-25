@@ -14,12 +14,12 @@ In addition to building a functional command-line application, this project help
 ## Table of Contents
 
 - [Description](#description)
-- [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
-- [Functionality](#functionality)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Walkthrough Video](#walkthrough-video)
 - [Technologies Used](#technologies-used)
-- [Acknowledgements](#acknowledgements)
-- [Getting Started](#getting-started)
+- [Contributing](#contributing)
 - [License](#license)
 - [Links](#links)
 
